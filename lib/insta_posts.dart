@@ -30,8 +30,8 @@ class _PostsState extends State<Posts> {
       mainAxisSize: MainAxisSize.min,
       children: [
         Container(
-          height: 42, 
-          padding: EdgeInsets.fromLTRB(15, 5, 15, 5),
+          height: 50, 
+          padding: EdgeInsets.fromLTRB(8, 5, 8, 5),
           width: double.infinity,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -41,9 +41,9 @@ class _PostsState extends State<Posts> {
                 children: [
                   WGradientRing(
                       child: Container(
-                      height: 35,
-                      width: 35,
-                      margin: const EdgeInsets.all(2),
+                      height: 40,
+                      width: 40,
+                      margin: const EdgeInsets.all(3),
                       decoration: BoxDecoration(
                           shape: BoxShape.circle, 
                           image: DecorationImage(
@@ -51,29 +51,30 @@ class _PostsState extends State<Posts> {
                     ),
                   ),
                   SizedBox(
-                    width: 10,
+                    width: 6,
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(widget.name,
                           style: TextStyle(
-                              fontSize: 12,
+                              fontSize: 15,
                               fontWeight: FontWeight.w600,
                               color: Colors.black,
                               letterSpacing: 1)),
                       Text(
                         widget.place,
                         style: TextStyle(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w200,
+                            fontSize: 13,
+                            fontWeight: FontWeight.w400,
                             color: Colors.black),
                       ),
                     ],
                   ),
                 ],
               ),
-              Icon(Icons.more_vert_outlined, size: 20,)
+              Icon(Icons.more_vert_outlined,)
             ],
           ),
         ),
@@ -85,7 +86,7 @@ class _PostsState extends State<Posts> {
           ),
         ),
         Padding(
-          padding: EdgeInsets.fromLTRB(10, 2, 10, 2),
+          padding: EdgeInsets.fromLTRB(8, 2, 8, 2),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
@@ -96,7 +97,7 @@ class _PostsState extends State<Posts> {
                     icon: Icon(
                         isPressed ? Icons.favorite : FontAwesomeIcons.heart),
                     color: isPressed ? Colors.red : Colors.black,
-                    iconSize: 20,
+                    iconSize: 24,
                     onPressed: () {
                       setState(() {
                         isPressed = !isPressed;
@@ -105,7 +106,7 @@ class _PostsState extends State<Posts> {
                         SnackBar mySnackbar = SnackBar(
                           content: Text(
                             "You Have Liked the Post",
-                            style: TextStyle(color: Colors.blue),
+                            style: TextStyle(color: Colors.blue, fontSize: 16),
                             textAlign: TextAlign.center,
                           ),
                           width: 300.0,
@@ -120,18 +121,18 @@ class _PostsState extends State<Posts> {
                       }
                     },
                   ),
-                  Icon(FontAwesomeIcons.comment, size: 20,),
+                  Icon(FontAwesomeIcons.comment, size: 24,),
                   SizedBox(
-                    width: 7,
+                    width: 8,
                   ),
-                  Icon(FontAwesomeIcons.paperPlane, size: 20,),
+                  Icon(FontAwesomeIcons.paperPlane, size: 24,),
                 ],
               ),
               IconButton(
                 icon: Icon(
                     ispressed ? Icons.bookmark : FontAwesomeIcons.bookmark),
                 color: Colors.black,
-                iconSize: 20,
+                iconSize: 24,
                 onPressed: () {
                   setState(() {
                     ispressed = !ispressed;
@@ -140,7 +141,7 @@ class _PostsState extends State<Posts> {
                     SnackBar mySnackbar = SnackBar(
                       content: Text(
                         "Saved to Collection",
-                        style: TextStyle(color: Colors.blue),
+                        style: TextStyle(color: Colors.blue, fontSize: 16),
                         textAlign: TextAlign.center,
                       ),
                       width: 300.0,

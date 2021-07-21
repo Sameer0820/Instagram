@@ -11,14 +11,14 @@ class DM extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(42),
+        preferredSize: Size.fromHeight(50),
         child: AppBar(
-          backgroundColor: Colors.white, 
+          backgroundColor: Colors.white,
           centerTitle: true,
           leading: Icon(
             Icons.arrow_back_ios_outlined,
             color: Colors.black,
-            size: 20,
+            size: 24,
           ),
           title: Container(
             child: Row(
@@ -28,12 +28,13 @@ class DM extends StatelessWidget {
                   'Sameer0820',
                   style: TextStyle(
                       color: Colors.black,
-                      fontSize: 16,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold),
                 ),
                 Icon(
                   Icons.arrow_drop_down_outlined,
                   color: Colors.black,
+                  size: 30,
                 ),
               ],
             ),
@@ -44,6 +45,7 @@ class DM extends StatelessWidget {
               child: Icon(
                 Icons.add,
                 color: Colors.black,
+                size: 30,
               ),
             )
           ],
@@ -52,6 +54,7 @@ class DM extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
           children: [
             SizedBox(
               height: 25,
@@ -62,7 +65,7 @@ class DM extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.grey[300]),
-                height: 30,
+                height: 35,
                 child: TextField(
                   autocorrect: true,
                   enableSuggestions: true,
@@ -79,72 +82,71 @@ class DM extends StatelessWidget {
               ),
             ),
             ListView(
-              scrollDirection: Axis.vertical,
-              shrinkWrap: true,
-              children: <Widget>[
-                Listtile(
-                  text1: ('Aditi_D'),
-                  text2: ('See you tomorrow, bye..'),
-                  text3: ('.now'),
-                  image: ("image1.jpg"),
-                ),
-                Listtile(
-                  text1: ('Rohan39'),
-                  text2: ('Have a nice day, bro!'),
-                  text3: ('.15 m'),
-                  image: ('image2.jpg'),
-                ),
-                Listtile(
-                  text1: ('Vasu_34'),
-                  text2: ('See you in the next meeting'),
-                  text3: ('.30m'),
-                  image: ('image3.jpg'),
-                ),
-                Listtile(
-                  text1: ('Shikha_Sr'),
-                  text2: ('Please bring my project'),
-                  text3: ('.2h'),
-                  image: ('image4.jpg'),
-                ),
-                Listtile(
-                  text1: ('Unknown11'),
-                  text2: ('This new design looks cool'),
-                  text3: ('.5h'),
-                  image: ('image5.jpg'),
-                ),
-                Listtile(
-                  text1: ('Web_Ds'),
-                  text2: ('This was very funny'),
-                  text3: ('.8h'),
-                  image: ('image6.jpg'),
-                ),
-                Listtile(
-                  text1: ('Arbitrary'),
-                  text2: ('Sounds good XD'),
-                  text3: ('.12h'),
-                  image: ('image7.jpg'),
-                ),
-                Listtile(
-                  text1: ('Confession_Page'),
-                  text2: ('Who wrote this message?'),
-                  text3: ('.15h'),
-                  image: ('image8.jpg'),
-                ),
-                Listtile(
-                  text1: ('_neelesh_'),
-                  text2: ('Yep, I am going to Manali tomorrow'),
-                  text3: ('.22h'),
-                  image: ('image9.jpg'),
-                ),
-                Listtile(
-                  text1: ('putin'),
-                  text2: ('When will you destroy America?'),
-                  text3: ('2d'),
-                  image: ('image10.jpg'),
-                ),
-              ],
-            )
-          ],
+              physics: NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                children: <Widget>[
+                  Listtile(
+                    text1: ('Aditi_D'),
+                    text2: ('See you tomorrow, bye..'),
+                    text3: ('.now'),
+                    image: ("assets/image1.jpg"),
+                  ),
+                  Listtile(
+                    text1: ('Rohan39'),
+                    text2: ('Have a nice day, bro!'),
+                    text3: ('.15 m'),
+                    image: ('assets/image2.jpg'),
+                  ),
+                  Listtile(
+                    text1: ('Vasu_34'),
+                    text2: ('See you in the next meeting'),
+                    text3: ('.30m'),
+                    image: ('assets/image3.jpg'),
+                  ),
+                  Listtile(
+                    text1: ('Shikha_Sr'),
+                    text2: ('Please bring my project'),
+                    text3: ('.2h'),
+                    image: ('assets/image4.jpg'),
+                  ),
+                  Listtile(
+                    text1: ('Unknown11'),
+                    text2: ('This new design looks cool'),
+                    text3: ('.5h'),
+                    image: ('assets/image5.jpg'),
+                  ),
+                  Listtile(
+                    text1: ('Web_Ds'),
+                    text2: ('This was very funny'),
+                    text3: ('.8h'),
+                    image: ('assets/image6.jpg'),
+                  ),
+                  Listtile(
+                    text1: ('Arbitrary'),
+                    text2: ('Sounds good XD'),
+                    text3: ('.12h'),
+                    image: ('assets/image7.jpg'),
+                  ),
+                  Listtile(
+                    text1: ('Confession_Page'),
+                    text2: ('Who wrote this message?'),
+                    text3: ('.15h'),
+                    image: ('assets/image8.jpg'),
+                  ),
+                  Listtile(
+                    text1: ('_neelesh_'),
+                    text2: ('Yep, I am going to Manali tomorrow'),
+                    text3: ('.22h'),
+                    image: ('assets/image9.jpg'),
+                  ),
+                  Listtile(
+                    text1: ('putin'),
+                    text2: ('When will you destroy America?'),
+                    text3: ('2d'),
+                    image: ('assets/image10.jpg'),
+                  ),
+                ],
+              )],
         ),
       ),
       bottomNavigationBar: Container(
@@ -158,7 +160,9 @@ class DM extends StatelessWidget {
               Icons.camera_alt,
               color: Colors.blue,
             ),
-            SizedBox(width: 5,),
+            SizedBox(
+              width: 5,
+            ),
             Text(
               "Camera",
               style: TextStyle(color: Colors.blue),

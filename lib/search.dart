@@ -49,7 +49,7 @@ class Search extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.grey[300]),
-                  height: 30,
+                  height: 35,
                   child: TextField(
                     autocorrect: true,
                     enableSuggestions: true,
@@ -64,7 +64,7 @@ class Search extends StatelessWidget {
                     ),
                   ),
                 ),
-                Icon(Icons.camera_enhance_outlined),
+                Icon(Icons.camera_enhance_outlined, size: 28,),
                 SizedBox(
                   width: 5,
                 ),
@@ -86,7 +86,7 @@ class Search extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.white,
                         border: Border.all(
-                          color: Colors.black.withOpacity(0.2),
+                          color: Colors.black.withOpacity(0.3),
                         ),
                       ),
                       child: Padding(
@@ -94,7 +94,7 @@ class Search extends StatelessWidget {
                         child: Text(
                           searchItems[index],
                           style: TextStyle(
-                              fontSize: 15, fontWeight: FontWeight.w500),
+                              fontSize: 16, fontWeight: FontWeight.w500),
                         ),
                       ),
                     ),
@@ -116,7 +116,7 @@ class Search extends StatelessWidget {
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           fit: BoxFit.fill,
-                          image: AssetImage('img$index.jpg'))),
+                          image: AssetImage('assets/img$index.jpg'))),
                 ),
               ),
             )
@@ -125,7 +125,7 @@ class Search extends StatelessWidget {
       ),
       bottomNavigationBar: Container(
         color: Colors.white,
-        height: 40,
+        height: 50,
         child: BottomAppBar(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -135,16 +135,16 @@ class Search extends StatelessWidget {
                     Navigator.of(context).pop(
                         MaterialPageRoute(builder: (context) => HomePage()));
                   },
-                  icon: Icon(Icons.home_outlined)),
+                  icon: Icon(Icons.home_outlined, size: 30,)),
               IconButton(
                   onPressed: () {},
                   icon: Icon(
                     FontAwesomeIcons.search,
-                    size: 20,
+                    size: 22,
                   )),
-              IconButton(onPressed: () {}, icon: Icon(Icons.add_box_outlined)),
+              IconButton(onPressed: () {}, icon: Icon(Icons.add_box_outlined, size: 30,)),
               IconButton(
-                  onPressed: () {}, icon: Icon(Icons.favorite_border_outlined)),
+                  onPressed: () {}, icon: Icon(Icons.favorite_border_outlined, size: 30,)),
               InkWell(
                 child: Container(
                   width: 30,
@@ -154,8 +154,8 @@ class Search extends StatelessWidget {
                     shape: BoxShape.circle, 
                     image: DecorationImage(
                       fit: BoxFit.fill,
-                      image: AssetImage(
-                        "image0.jpg",
+                      image: AssetImage( 
+                        "assets/image0.jpg",
                       ),
                     ),
                   ),

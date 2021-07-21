@@ -15,15 +15,15 @@ class SignIn extends StatelessWidget {
           children: [ 
             Icon(Icons.arrow_back_ios_outlined),
             Container(
-              height: 120,
-              padding: EdgeInsets.fromLTRB(150, 0, 150, 0),
+              height: 150,
+              padding: EdgeInsets.fromLTRB(100, 0, 100, 0),
               child: Center(child: Image.asset('assets/logo.png')),
             ),
             SizedBox(
               height: 20,
             ),
             Container(
-              height: 40,
+              height: 50,
               child: TextField(
                 autocorrect: true,
                 enableSuggestions: true,
@@ -40,7 +40,7 @@ class SignIn extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Container(
-              height: 40,
+              height: 50,
               child: TextField(
                 autocorrect: true,
                 enableSuggestions: true,
@@ -63,7 +63,7 @@ class SignIn extends StatelessWidget {
                 InkWell(
                   child: new Text(
                     'Forgot Password?',
-                    style: TextStyle(color: Colors.blue),
+                    style: TextStyle(color: Colors.blue, fontSize: 16),
                   ),
                   onTap: () {},
                   hoverColor: Colors.pink[100],
@@ -73,14 +73,14 @@ class SignIn extends StatelessWidget {
             SizedBox(height: 40),
             Center( 
               child: Container(
-                height: 40,
+                height: 45,
                 width: MediaQuery.of(context).size.width / 1.1,
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.of(context)
                       .pushReplacement(MaterialPageRoute(builder: (context) => HomePage()));
                   },
-                  child: Text('Sign In'),
+                  child: Text('Sign In', style: TextStyle(fontSize: 16)),
                 ),
               ),
             ),
@@ -89,9 +89,9 @@ class SignIn extends StatelessWidget {
               children: [
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: Container(
+                  child: Container( 
                       height: 1.0,
-                      width: MediaQuery.of(context).size.width / 2.6,
+                      width: MediaQuery.of(context).size.width / 2.7,
                       color: Colors.black),
                 ),
                 Text("OR"),
@@ -99,7 +99,7 @@ class SignIn extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 10),
                   child: Container(
                       height: 1.0,
-                      width: MediaQuery.of(context).size.width / 2.6,
+                      width: MediaQuery.of(context).size.width / 2.7,
                       color: Colors.black),
                 ),
               ],
@@ -110,13 +110,13 @@ class SignIn extends StatelessWidget {
               children: [
                 Center(
                   child: Container(
-                    child: Text("Don't have an account? "),
+                    child: Text("Don't have an account? ", style: TextStyle(fontSize: 16)),
                   ),
                 ),
                 InkWell(
                   child: new Text(
                     'Sign Up',
-                    style: TextStyle(color: Colors.blue),
+                    style: TextStyle(color: Colors.blue, fontSize: 16),
                   ),
                   onTap: () {
                     Navigator.of(context)

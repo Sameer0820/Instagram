@@ -13,7 +13,7 @@ class Profile extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(42),
+        preferredSize: Size.fromHeight(50),
         child: AppBar(
           backgroundColor: Colors.white,
           centerTitle: true,
@@ -24,18 +24,19 @@ class Profile extends StatelessWidget {
                 Icon(
                   Icons.lock_outline_sharp,
                   color: Colors.black,
-                  size: 16,
+                  size: 20,
                 ),
                 Text(
                   'Sameer0820',
                   style: TextStyle(
                       color: Colors.black,
-                      fontSize: 16,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold),
                 ),
                 Icon(
                   Icons.arrow_drop_down_outlined,
                   color: Colors.black,
+                  size: 30,
                 )
               ],
             ),
@@ -54,15 +55,15 @@ class Profile extends StatelessWidget {
                 children: [
                   WGradientRing(
                     child: Container(
-                      width: 70,
-                      height: 70,
+                      width: 85,
+                      height: 85,
                       margin: const EdgeInsets.all(4),
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
                           fit: BoxFit.fill,
                           image: AssetImage(
-                            "image0.jpg",
+                            "assets/image0.jpg",
                           ),
                         ),
                       ),
@@ -74,12 +75,12 @@ class Profile extends StatelessWidget {
                         Text(
                           "54",
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.bold),
+                              fontSize: 20, fontWeight: FontWeight.w600),
                         ),
                         Text(
                           'Posts',
                           style: TextStyle(
-                              fontSize: 12, fontWeight: FontWeight.w500),
+                              fontSize: 16, fontWeight: FontWeight.w400),
                         )
                       ],
                     ),
@@ -90,12 +91,12 @@ class Profile extends StatelessWidget {
                         Text(
                           "834",
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.bold),
+                              fontSize: 20, fontWeight: FontWeight.w600),
                         ),
                         Text(
                           'Followers',
                           style: TextStyle(
-                              fontSize: 12, fontWeight: FontWeight.w500),
+                              fontSize: 16, fontWeight: FontWeight.w400),
                         )
                       ],
                     ),
@@ -106,12 +107,12 @@ class Profile extends StatelessWidget {
                         Text(
                           "162",
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.bold),
+                              fontSize: 20, fontWeight: FontWeight.w600),
                         ),
                         Text(
                           'Following',
                           style: TextStyle(
-                              fontSize: 12, fontWeight: FontWeight.w500),
+                              fontSize: 16, fontWeight: FontWeight.w400),
                         )
                       ],
                     ),
@@ -126,19 +127,19 @@ class Profile extends StatelessWidget {
                 children: [
                   Text(
                     'Sameer Raj',
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
                   ),
                   Text(
                     'IIT Guwahati',
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
                   ),
                   Text(
                     'MnC 2024',
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
                   ),
                   Text(
                     "If you keep questioning your worthiness, you're never gonna become worthy.",
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
                   )
                 ],
               ),
@@ -149,15 +150,15 @@ class Profile extends StatelessWidget {
             Center(
               child: Container(
                 width: size.width - 30,
-                height: 27,
+                height: 35,
                 decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
+                    border: Border.all(color: Colors.black.withOpacity(0.5),),
                     borderRadius: BorderRadius.circular(5)),
                 child: ElevatedButton(
                   onPressed: () {},
-                  child: Text('Edit Profile',
+                  child: Text('Edit Profile', 
                       style:
-                          TextStyle(fontWeight: FontWeight.w600, fontSize: 13)),
+                          TextStyle(fontWeight: FontWeight.w600, fontSize: 16)),
                   style: ElevatedButton.styleFrom(
                     primary: Colors.white,
                     onPrimary: Colors.black,
@@ -179,7 +180,7 @@ class Profile extends StatelessWidget {
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           fit: BoxFit.fill,
-                          image: AssetImage('picture$index.jpg'))),
+                          image: AssetImage('assets/picture$index.jpg'))),
                 ),
               ),
             )
@@ -188,7 +189,7 @@ class Profile extends StatelessWidget {
       ),
       bottomNavigationBar: Container(
         color: Colors.white,
-        height: 40,
+        height: 50,
         child: BottomAppBar(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -198,29 +199,29 @@ class Profile extends StatelessWidget {
                     Navigator.of(context).pop(
                         MaterialPageRoute(builder: (context) => HomePage()));
                   },
-                  icon: Icon(Icons.home_outlined)),
+                  icon: Icon(Icons.home_outlined, size: 30)),
               IconButton(
                 onPressed: () {
                   Navigator.of(context)
                       .pushReplacement(MaterialPageRoute(builder: (context) => Search()));
                 },
-                icon: Icon(Icons.search),
+                icon: Icon(Icons.search, size: 30,),
               ),
-              IconButton(onPressed: () {}, icon: Icon(Icons.add_box_outlined)),
+              IconButton(onPressed: () {}, icon: Icon(Icons.add_box_outlined, size: 30,)),
               IconButton(
-                  onPressed: () {}, icon: Icon(Icons.favorite_border_outlined)),
+                  onPressed: () {}, icon: Icon(Icons.favorite_border_outlined, size: 30,)),
               InkWell(
                 child: WGradientRing(
                   child: Container( 
                     width: 30,
                     height: 30,
-                    margin: const EdgeInsets.all(2),
+                    margin: const EdgeInsets.all(3),
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       image: DecorationImage(
                         fit: BoxFit.fill,
                         image: AssetImage(
-                          "image0.jpg",
+                          "assets/image0.jpg",
                         ),
                       ),
                     ),

@@ -8,7 +8,7 @@ class Listtile extends StatelessWidget {
   final image;
 
   const Listtile(
-      {Key? key,
+      {Key? key, 
       @required this.text1,
       @required this.text2,
       @required this.text3,
@@ -18,26 +18,26 @@ class Listtile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(text1, style: TextStyle(fontSize: 13)),
-      contentPadding: EdgeInsets.fromLTRB(8, 0, 15, 0),
+      title: Text(text1, style: TextStyle(fontSize: 15)),
+      contentPadding: EdgeInsets.fromLTRB(6, 0, 15, 0),
       subtitle: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
             text2,
-            style: TextStyle(fontWeight: FontWeight.w300, fontSize: 13),
+            style: TextStyle(fontWeight: FontWeight.w400, fontSize: 14),
           ),
           Text(
             text3,
-            style: TextStyle(fontSize: 13), 
+            style: TextStyle(fontSize: 14), 
           )
         ],
       ),
-      trailing: Icon(Icons.camera_alt_outlined),
+      trailing: Icon(Icons.camera_alt_outlined, size: 28,),
       leading: WGradientRing(
         child: Container(
-          width: 56,
-          height: 56,
+          width: 62,
+          height: 62,
           margin: const EdgeInsets.all(4),
           decoration: BoxDecoration(
             shape: BoxShape.circle,

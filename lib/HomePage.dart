@@ -27,18 +27,19 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(45),
+        preferredSize: Size.fromHeight(50),
         child: AppBar(
           backgroundColor: Colors.white,
           centerTitle: true,
           leading: Icon(
             Icons.camera_alt_outlined,
             color: Colors.black,
+            size: 28,
           ),
           title: SizedBox(
             child: Image.asset(
               'assets/logo.png',
-              height: 35,
+              height: 40,
             ),
           ),
           actions: <Widget>[
@@ -53,6 +54,7 @@ class HomePage extends StatelessWidget {
                 child: Icon(
                   Icons.send_outlined,
                   color: Colors.black,
+                  size: 28
                 ),
               ),
             ),
@@ -63,7 +65,7 @@ class HomePage extends StatelessWidget {
         SliverList(
           delegate: SliverChildListDelegate(<Widget>[
             Container(
-              height: 85,
+              height: 120,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: List.generate(
@@ -74,15 +76,15 @@ class HomePage extends StatelessWidget {
                       children: [
                         new WGradientRing(
                           child: Container(
-                            width: 50,
-                            height: 50,
-                            margin: const EdgeInsets.all(5),
+                            width: 70,
+                            height: 70,
+                            margin: const EdgeInsets.all(6),
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               image: DecorationImage(
                                 fit: BoxFit.fill,
                                 image: AssetImage(
-                                  "image$index.jpg",
+                                  "assets/image$index.jpg",
                                 ),
                               ),
                             ),
@@ -91,7 +93,7 @@ class HomePage extends StatelessWidget {
                         Text(
                           myList[index],
                           style: TextStyle(
-                              fontSize: 10, fontWeight: FontWeight.w500),
+                              fontSize: 13, fontWeight: FontWeight.w500),
                         )
                       ],
                     );
@@ -107,65 +109,65 @@ class HomePage extends StatelessWidget {
         SliverList(
           delegate: SliverChildListDelegate(<Widget>[
             Posts(
-              picture: AssetImage('image1.jpg'),
-              pic: AssetImage('pic1.jpeg'),
+              picture: AssetImage('assets/image1.jpg'),
+              pic: AssetImage('assets/pic1.jpeg'),
               name: ('Aditi_D'),
               caption:
                   ('It is such a beautiful place to enjoy your vacations.'),
               place: ('Milford Sound'),
             ),
             Posts(
-              picture: AssetImage('image2.jpg'),
-              pic: AssetImage('pic2.jpg'),
+              picture: AssetImage('assets/image2.jpg'),
+              pic: AssetImage('assets/pic2.jpg'),
               name: ('Rohan39'),
               caption: ('One of my best pics. Clicked with Sony A7R Mark 3'),
               place: ('Plitvice Lakes'),
             ),
             Posts(
-                picture: AssetImage('image3.jpg'),
-                pic: AssetImage('pic3.jpeg'),
+                picture: AssetImage('assets/image3.jpg'),
+                pic: AssetImage('assets/pic3.jpeg'),
                 name: ('Vasu_34'),
                 caption: ('Eiffel Tower, named after engineer Gustave Eiffel'),
                 place: ('New York')),
             Posts(
-                picture: AssetImage('image4.jpg'),
-                pic: AssetImage('pic4.jpg'),
+                picture: AssetImage('assets/image4.jpg'),
+                pic: AssetImage('assets/pic4.jpg'),
                 name: ('Shikha_Sr'),
                 caption: ('Just a random click'),
                 place: ('Home')),
             Posts(
-                picture: AssetImage('image5.jpg'),
-                pic: AssetImage('pic5.jpg'),
+                picture: AssetImage('assets/image5.jpg'),
+                pic: AssetImage('assets/pic5.jpg'),
                 name: ('Unknown11'),
                 caption: ('Best place to enjoy your vacations.'),
                 place: ('Angel Falls')),
             Posts(
-                picture: AssetImage('image6.jpg'),
-                pic: AssetImage('pic6.jpg'),
+                picture: AssetImage('assets/image6.jpg'),
+                pic: AssetImage('assets/pic6.jpg'),
                 name: ('Web_Ds'),
                 caption: ('My office setup'),
                 place: ('Banglore')),
             Posts(
-                picture: AssetImage('image7.jpg'),
-                pic: AssetImage('pic7.jpg'),
+                picture: AssetImage('assets/image7.jpg'),
+                pic: AssetImage('assets/pic7.jpg'),
                 name: ('Arbitrary'),
                 caption: ('Enjoying Coffee'),
                 place: ('CCD')),
             Posts(
-                picture: AssetImage('image8.jpg'),
-                pic: AssetImage('pic8.jpg'),
+                picture: AssetImage('assets/image8.jpg'),
+                pic: AssetImage('assets/pic8.jpg'),
                 name: ('Confession_page'),
                 caption: ('Monsoon is here, YaY'),
                 place: ('Delhi')),
             Posts(
-                picture: AssetImage('image9.jpg'),
-                pic: AssetImage('pic9.jpg'),
+                picture: AssetImage('assets/image9.jpg'),
+                pic: AssetImage('assets/pic9.jpg'),
                 name: ('_neelesh_'),
                 caption: ('What a beautiful scenery. Always love this place.'),
                 place: ('Nepal')),
             Posts(
-                picture: AssetImage('image10.jpg'),
-                pic: AssetImage('pic10.jpg'),
+                picture: AssetImage('assets/image10.jpg'),
+                pic: AssetImage('assets/pic10.jpg'),
                 name: ('Putin'),
                 caption: ('Mississippi'),
                 place: ('Chicago')),
@@ -174,21 +176,21 @@ class HomePage extends StatelessWidget {
       ]),
       bottomNavigationBar: Container(
         color: Colors.white,
-        height: 40, 
+        height: 50, 
         child: BottomAppBar(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              IconButton(onPressed: () {}, icon: Icon(Icons.home)),
+              IconButton(onPressed: () {}, icon: Icon(Icons.home, size: 30,)),
               IconButton(
                   onPressed: () {
                     Navigator.of(context).push(
                         MaterialPageRoute(builder: (context) => Search()));
                   },
-                  icon: Icon(Icons.search)),
-              IconButton(onPressed: () {}, icon: Icon(Icons.add_box_outlined)),
+                  icon: Icon(Icons.search, size: 30,)),
+              IconButton(onPressed: () {}, icon: Icon(Icons.add_box_outlined, size: 30,)),
               IconButton(
-                  onPressed: () {}, icon: Icon(Icons.favorite_border_outlined)),
+                  onPressed: () {}, icon: Icon(Icons.favorite_border_outlined, size: 30,)),
               InkWell(
                 child: Container(
                   width: 30,
@@ -199,7 +201,7 @@ class HomePage extends StatelessWidget {
                     image: DecorationImage(
                       fit: BoxFit.fill,
                       image: AssetImage(
-                        "image0.jpg",
+                        "assets/image0.jpg",
                       ),
                     ),
                   ),

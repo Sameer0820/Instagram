@@ -18,19 +18,21 @@ class Home extends StatelessWidget {
           Center(
             child: Container(
               width: MediaQuery.of(context).size.width / 1.2,
+              height: 50,
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.of(context)
                       .push(MaterialPageRoute(builder: (context) => SignIn()));
                 },
-                child: Text('Log in'),
+                child: Text('Log in', style: TextStyle(fontSize: 16),),
               ),
             ),
           ),
-          SizedBox(height: 50),
+          SizedBox(height: 50), 
           Center(
             child: Container(
               width: MediaQuery.of(context).size.width / 1.2,
+              height: 50,
               decoration: BoxDecoration(
                   border: Border.all(color: Colors.blue),
                   borderRadius: BorderRadius.circular(5)),
@@ -39,7 +41,7 @@ class Home extends StatelessWidget {
                   Navigator.of(context)
                       .push(MaterialPageRoute(builder: (context) => Sign()));
                 },
-                child: Text('Sign Up'),
+                child: Text('Sign Up',style: TextStyle(fontSize: 16)),
                 style: ElevatedButton.styleFrom(
                   primary: Colors.white,
                   onPrimary: Colors.blue,

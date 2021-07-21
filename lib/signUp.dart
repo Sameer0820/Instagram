@@ -16,14 +16,14 @@ class Sign extends StatelessWidget {
             Icon(Icons.arrow_back_ios_outlined),
             Container(
               height: 100,
-              padding: EdgeInsets.fromLTRB(150, 0, 150, 0),
+              padding: EdgeInsets.fromLTRB(100, 0, 100, 0),
               child: Center(child: Image.asset('assets/logo.png')),
             ),
             SizedBox(
               height: 20,
             ),
             Container( 
-              height: 40,
+              height: 50,
               child: TextField(
                 autocorrect: true,
                 enableSuggestions: true,
@@ -40,7 +40,7 @@ class Sign extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Container(
-              height: 40,
+              height: 50,
               child: TextField(
                 autocorrect: true,
                 enableSuggestions: true,
@@ -58,7 +58,7 @@ class Sign extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Container(
-              height: 40,
+              height: 50,
               child: TextField(
                 autocorrect: true,
                 enableSuggestions: true,
@@ -76,7 +76,7 @@ class Sign extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Container(
-              height: 40,
+              height: 50,
               child: TextField(
                 autocorrect: true,
                 enableSuggestions: true,
@@ -95,14 +95,14 @@ class Sign extends StatelessWidget {
             SizedBox(height: 20),
             Center(
               child: Container(
-                height: 40,
+                height: 45,
                 width: MediaQuery.of(context).size.width / 1.1,
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.of(context)
                       .pushReplacement(MaterialPageRoute(builder: (context) => HomePage()));
                   },
-                  child: Text('Sign Up'),
+                  child: Text('Sign Up',style: TextStyle(fontSize: 16)),
                 ),
               ),
             ),
@@ -112,8 +112,8 @@ class Sign extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 10),
                   child: Container(
-                      height: 1.0,
-                      width: MediaQuery.of(context).size.width / 2.6,
+                      height: 1.0, 
+                      width: MediaQuery.of(context).size.width / 2.7,
                       color: Colors.black),
                 ),
                 Text("OR"),
@@ -121,7 +121,7 @@ class Sign extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 10),
                   child: Container(
                       height: 1.0,
-                      width: MediaQuery.of(context).size.width / 2.6,
+                      width: MediaQuery.of(context).size.width / 2.7,
                       color: Colors.black),
                 ),
               ],
@@ -132,13 +132,13 @@ class Sign extends StatelessWidget {
               children: [
                 Center(
                   child: Container(
-                    child: Text('Have an account? '),
+                    child: Text('Have an account? ',style: TextStyle(fontSize: 16)),
                   ),
                 ),
                 InkWell(
                   child: new Text(
                     'Log in',
-                    style: TextStyle(color: Colors.blue),
+                    style: TextStyle(color: Colors.blue, fontSize: 16),
                   ),
                   onTap: () {
                     Navigator.of(context).pushReplacement(
