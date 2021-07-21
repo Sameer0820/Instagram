@@ -165,7 +165,7 @@ class _PostsState extends State<Posts> {
             children: [
               Text(
                 "Liked by Sameer08, _raghav121 and 44,686 others",
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12),
+                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
                 textAlign: TextAlign.start,
               ),
             ],
@@ -177,14 +177,14 @@ class _PostsState extends State<Posts> {
             children: [
               Text(
                 widget.name,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
               ),
               SizedBox(
                 width: 8,
               ),
               Text(
                 widget.caption,
-                style: TextStyle(fontSize: 12),
+                style: TextStyle(fontSize: 14),
                 textAlign: TextAlign.left,
               ),
             ],
@@ -196,7 +196,7 @@ class _PostsState extends State<Posts> {
             children: [
               Text(
                 "1 Day Ago",
-                style: TextStyle(fontSize: 9, color: Colors.grey),
+                style: TextStyle(fontSize: 11, color: Colors.grey),
               ),
             ],
           ),
