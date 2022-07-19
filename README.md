@@ -1,6 +1,6 @@
 ## Instagram Clone
 
-It's a clone of Instagram App made using Flutter and Firebase with basic fuctionalities.
+It's a clone of Instagram App made using Flutter and Firebase with basic functionalities.
 
 ## Setup
 
