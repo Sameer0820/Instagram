@@ -50,3 +50,7 @@ To open the messenger click on the top right arrow icon in home page.
 <p align = "center"> 
 <img src="https://user-images.githubusercontent.com/83599568/179817553-2559e882-7247-4991-a3e8-60b0be9d483a.png" width="30%"/>
 </p>
+
+## Conclusion
+The backend part of this project is still not completed. For now it's only the UI part which is working.
+Thank you for visiting my project. Hope you like it. If there is any issue, feel free to contact me @ sameerraj0820@gmail.com
